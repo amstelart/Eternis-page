@@ -1,0 +1,94 @@
+// В этом файле должны быть стили для БЭМ-блока info-box, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.info-box {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    font-family: SegoeUIRegular;
+    font-weight: normal;
+    font-size: 22px;
+    color: #26292D;
+
+    @media (min-width: $screen-lg) {
+      font-size: 35px;
+    }
+  }
+
+  &__caption {
+    font-family: SegoeUILight;
+    font-size: 16px;
+    color: #565759;
+
+    @media (min-width: $screen-lg) {
+      font-size: 20px;
+    }
+
+    p {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__img-wrap {
+
+    position: relative;
+    margin-bottom: 60px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      bottom: 3%;
+      left: 10%;
+      right: 10%;
+      background-image: url('../img/study-img.jpg');
+      opacity: 0.6;
+      filter: blur(60px);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__row {
+    @include row;
+  }
+
+  &__item {
+    @include col();
+    @include col(lg, 4);
+    margin-bottom: 16px;
+  }
+
+  &__card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    padding: 32px;
+  }
+
+  &__card-title {
+    font-size: 18px;
+    color: #26292D;
+    font-family: SegoeUIRegular;
+    font-weight: normal;
+    margin: 15px 0;
+
+    @media (min-width: $screen-lg) {
+      font-size: 22px;
+    }
+  }
+
+  &__card-text {
+    font-family: SegoeUILight;
+    font-size: 16px;
+    color: #565759;
+  }
+}

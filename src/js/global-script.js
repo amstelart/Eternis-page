@@ -1,0 +1,56 @@
+$( document ).ready(function() {
+    $('.objects-box__carousel').owlCarousel({
+        loop:true,
+        center: true,
+        margin:30,
+        nav:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:false
+            },
+            768:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+    $('.reviews-box__carousel').owlCarousel({
+        loop:true,
+        center: true,
+        margin:30,
+        nav:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:false
+            },
+            768:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+    $('.license-box__carousel').owlCarousel({
+        loop:true,
+        center: true,
+        margin:30,
+        nav:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:false
+            },
+            768:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+});
