@@ -293,6 +293,8 @@
       height: 3px;
       margin: 10px auto 0 auto;
       background-color: #dd0324; }
+.reviews-box__card a {
+    display: block; }
 .license-box {
   padding: 40px 0; }
 .license-box__title {
